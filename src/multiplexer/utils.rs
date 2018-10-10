@@ -357,7 +357,7 @@ pub fn create_transport_tls(
     RedisCodec::new(config_ref.get_max_size(), size_stats)
   };
   let host = fry!(read_centralized_host(&config));
-
+  // TODO: Check that host, and config are correct.
   Box::new(TcpStream::connect(&addr, handle)
     .from_err::<RedisError>()
     .and_then(move |socket| {

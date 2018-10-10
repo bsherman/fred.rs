@@ -220,9 +220,9 @@ impl RedisConfig {
   /// Create a centralized config with default settings for a local deployment.
   pub fn default_centralized() -> RedisConfig {
     RedisConfig::Centralized {
-      host: "127.0.0.1".to_owned(),
+      host: "master.temp-azq-beta-infra.eyre3a.usw2.cache.amazonaws.com".to_owned(),
       port: 6379,
-      key: None,
+      key: Some("ohforfredssake\\!!".to_owned()),
       max_value_size: None,
       tls: false
     }

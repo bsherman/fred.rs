@@ -47,6 +47,9 @@ use super::sets as sets_tests;
 #[test]
 fn it_should_connect_and_disconnect() {
   let mut config = RedisConfig::default();
+  println!("---------------------------------------------");
+  println!("{:?}", config);
+  println!("---------------------------------------------");
   let mut core = Core::new().unwrap();
   let handle = core.handle();
 
